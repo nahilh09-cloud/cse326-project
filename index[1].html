@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPTIVUE – Eyewear Prescription Glasses Frame Selector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ================= NAVIGATION BAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="logo" aria-label="OPTIVUE Home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="28" height="16" viewBox="0 0 28 16" fill="none">
+            <circle cx="7" cy="8" r="5.5" stroke="currentColor" stroke-width="1.8" />
+            <circle cx="21" cy="8" r="5.5" stroke="currentColor" stroke-width="1.8" />
+            <path d="M12.5 8C13.2 6.8 14.8 6.8 15.5 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="logo-text">OPTIVUE</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links" id="navLinks" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#frames" class="nav-link" data-section="frames">Frames</a>
+        <a href="#lens-selector" class="nav-link" data-section="lens-selector">Lens Selector</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+      </nav>
+
+      <!-- Cart Button & Mobile Menu Toggle -->
+      <div class="nav-actions">
+        <button type="button" class="cart-btn" id="cartToggleBtn" aria-label="Open shopping cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <button type="button" class="menu-toggle" id="menuToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO & FEATURED SECTION (HOME) ================= -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Optical Frame &amp; Lens Guide</p>
+          <h1>Find Your Perfect Vision</h1>
+          <p class="hero-description">
+            Explore curated acetate and titanium frames, and discover which prescription lens
+            index offers the clearest, slimmest fit for your daily comfort.
+          </p>
+          <div class="hero-buttons">
+            <a href="#frames" class="btn btn-primary" id="exploreFramesBtn">Explore Frames</a>
+            <a href="#lens-selector" class="btn btn-outline">Check Lens Index</a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <strong>4 Classic Shapes</strong>
+              <span>Round, Wayfarer, Aviator &amp; Cat-Eye</span>
+            </div>
+            <div class="highlight-item">
+              <strong>5 Lens Indexes</strong>
+              <span>1.50 Standard to 1.74 Ultra Thin</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <span class="hero-badge">Signature Collection</span>
+            <div class="hero-illustration" aria-hidden="true">
+              <svg viewBox="0 0 360 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="360" height="170" rx="16" fill="#F5F1EA" />
+                <path d="M35 82C35 55 57 38 92 38C127 38 148 55 148 82C148 112 126 130 92 130C58 130 35 112 35 82Z" fill="#FFFFFF" fill-opacity="0.7" stroke="#111111" stroke-width="6" />
+                <path d="M212 82C212 55 233 38 268 38C303 38 325 55 325 82C325 112 302 130 268 130C234 130 212 112 212 82Z" fill="#FFFFFF" fill-opacity="0.7" stroke="#111111" stroke-width="6" />
+                <path d="M148 76C162 66 198 66 212 76" stroke="#111111" stroke-width="6" stroke-linecap="round" />
+                <line x1="20" y1="74" x2="36" y2="74" stroke="#111111" stroke-width="6" stroke-linecap="round" />
+                <line x1="324" y1="74" x2="340" y2="74" stroke="#111111" stroke-width="6" stroke-linecap="round" />
+                <path d="M62 60L78 48" stroke="#D8CEBE" stroke-width="3" stroke-linecap="round" />
+                <path d="M238 60L254 48" stroke="#D8CEBE" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="hero-card-footer">
+              <div>
+                <h3>Designed for Everyday Clarity</h3>
+                <p>Lightweight frames paired with precision lens guidance.</p>
+              </div>
+              <a href="#lens-selector" class="text-link">Try Selector &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Eyewear Products -->
+      <div class="container featured-block">
+        <div class="section-header-row">
+          <div>
+            <p class="eyebrow">Curated Picks</p>
+            <h2>Featured Eyewear</h2>
+          </div>
+          <a href="#frames" class="text-link">View Full Catalogue &rarr;</a>
+        </div>
+        <div class="product-grid featured-grid" id="featuredGrid">
+          <!-- Populated dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EYEWEAR FRAME CATALOGUE ================= -->
+    <section id="frames" class="section beige-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Eyewear Collection</p>
+          <h2>Eyewear Frame Catalogue</h2>
+          <p class="section-subtitle">
+            Search or filter our frames by silhouette and material to find the style that fits your face and prescription.
+          </p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="catalogue-controls">
+          <div class="search-box">
+            <label for="searchInput" class="sr-only">Search frames</label>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search frames by name, shape, or material..."
+            />
+          </div>
+
+          <div class="filter-groups">
+            <!-- Shape Filters -->
+            <div class="filter-group">
+              <span class="filter-label">Shape:</span>
+              <div class="filter-buttons" id="shapeFilterGroup">
+                <button type="button" class="filter-btn active" data-shape="All">All</button>
+                <button type="button" class="filter-btn" data-shape="Round">Round</button>
+                <button type="button" class="filter-btn" data-shape="Wayfarer">Wayfarer</button>
+                <button type="button" class="filter-btn" data-shape="Aviator">Aviator</button>
+                <button type="button" class="filter-btn" data-shape="Cat-Eye">Cat-Eye</button>
+              </div>
+            </div>
+
+            <!-- Material Filters -->
+            <div class="filter-group">
+              <span class="filter-label">Material:</span>
+              <div class="filter-buttons" id="materialFilterGroup">
+                <button type="button" class="filter-btn active" data-material="All">All</button>
+                <button type="button" class="filter-btn" data-material="Acetate">Acetate</button>
+                <button type="button" class="filter-btn" data-material="Titanium">Titanium</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Summary -->
+        <div class="results-bar">
+          <p id="resultsCount">Showing 8 frames</p>
+          <button type="button" class="reset-link" id="resetFiltersBtn">Reset Filters</button>
+        </div>
+
+        <!-- Frame Cards Grid -->
+        <div class="product-grid" id="framesGrid">
+          <!-- Populated dynamically by script.js -->
+        </div>
+
+        <!-- Empty Search State -->
+        <div class="empty-state hidden" id="emptyState">
+          <p>No eyewear frames matched your selected filters.</p>
+          <button type="button" class="btn btn-outline" id="clearSearchBtn">Show All Frames</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRESCRIPTION LENS SELECTOR ================= -->
+    <section id="lens-selector" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Main Feature</p>
+          <h2>Prescription Lens Selector</h2>
+          <p class="section-subtitle">
+            Enter your eye prescription details below to receive an educational recommendation on the ideal lens thickness index.
+          </p>
+        </div>
+
+        <div class="selector-layout">
+          <!-- Prescription Input Form -->
+          <div class="selector-form-card">
+            <h3>Enter Your Prescription</h3>
+            <p class="form-helper">
+              Use values from your eye test slip (e.g., SPH -2.50, CYL -0.75, Axis 90, PD 63).
+            </p>
+
+            <form id="lensForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="rightSph">Right Eye SPH (OD)</label>
+                  <input
+                    type="number"
+                    id="rightSph"
+                    step="0.25"
+                    min="-12"
+                    max="10"
+                    placeholder="e.g. -2.50"
+                    required
+                  />
+                  <small>Range: -12.00 to +10.00</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="leftSph">Left Eye SPH (OS)</label>
+                  <input
+                    type="number"
+                    id="leftSph"
+                    step="0.25"
+                    min="-12"
+                    max="10"
+                    placeholder="e.g. -2.25"
+                    required
+                  />
+                  <small>Range: -12.00 to +10.00</small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cylValue">CYL (Cylinder)</label>
+                  <input
+                    type="number"
+                    id="cylValue"
+                    step="0.25"
+                    min="-6"
+                    max="6"
+                    placeholder="e.g. -0.75"
+                    required
+                  />
+                  <small>Enter 0 if no astigmatism (-6.00 to +6.00)</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="axisValue">Axis (Degrees)</label>
+                  <input
+                    type="number"
+                    id="axisValue"
+                    step="1"
+                    min="0"
+                    max="180"
+                    placeholder="e.g. 90"
+                    required
+                  />
+                  <small>Range: 0 to 180 (0 if CYL is 0)</small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="pdValue">Pupillary Distance (PD in mm)</label>
+                <input
+                  type="number"
+                  id="pdValue"
+                  step="0.5"
+                  min="48"
+                  max="80"
+                  placeholder="e.g. 63"
+                  required
+                />
+                <small>Typical adult range: 54 mm to 74 mm</small>
+              </div>
+
+              <!-- Validation Error Box -->
+              <div class="form-error hidden" id="formError" role="alert"></div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary" id="findLensBtn">Find My Lens</button>
+                <button type="button" class="btn btn-outline" id="sampleRxBtn">Fill Sample Rx</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Educational Recommendation Panel -->
+          <div class="selector-result-card">
+            <!-- Initial Prompt Before Submission -->
+            <div class="result-placeholder" id="resultPlaceholder">
+              <h3>Lens Index Educational Guide</h3>
+              <p>
+                Fill in your prescription values and click <strong>Find My Lens</strong> to see which lens index matches your power range.
+              </p>
+              <ul class="index-overview-list">
+                <li><strong>1.50 – Standard Lens:</strong> Best for mild prescriptions (0.00 to ±1.75).</li>
+                <li><strong>1.56 – Mid Index Lens:</strong> Balanced thickness for low-to-moderate powers (±2.00 to ±3.75).</li>
+                <li><strong>1.60 – Thin Lens:</strong> Slimmer and lighter for moderate prescriptions (±4.00 to ±5.75).</li>
+                <li><strong>1.67 – High Index Lens:</strong> Noticeably thinner edges for stronger prescriptions (±6.00 to ±7.75).</li>
+                <li><strong>1.74 – Ultra Thin Lens:</strong> Maximum thinness for very high prescriptions (±8.00 and above).</li>
+              </ul>
+            </div>
+
+            <!-- Dynamic Result Output -->
+            <div class="result-output hidden" id="resultOutput">
+              <div class="recommended-banner">
+                <span class="badge-pill">Recommended Option</span>
+                <h3 id="recommendedTitle">1.56 – Mid Index Lens</h3>
+                <p id="recommendedReason"></p>
+              </div>
+
+              <div class="rx-summary" id="rxSummary"></div>
+
+              <h4>All Lens Indexes Explained</h4>
+              <div class="index-cards" id="indexCards">
+                <!-- Populated by script.js -->
+              </div>
+
+              <p class="disclaimer-box">
+                <strong>Important Disclaimer:</strong> This result is an indicative suggestion for educational
+                purposes only. Final lens index selection, coatings, and exact frame fitting should always be
+                confirmed by a qualified optician.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="section beige-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Learn More</p>
+          <h2>About OPTIVUE</h2>
+          <p class="section-subtitle">
+            Understanding how eyewear frames and lens indexes work together helps you choose glasses that look great and feel comfortable all day.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <span class="about-number">01</span>
+            <h3>What Is OPTIVUE?</h3>
+            <p>
+              OPTIVUE is an interactive eyewear frame selector and educational prescription lens guide.
+              It helps first-time and experienced glasses wearers explore classic frame styles while
+              learning which lens thickness suits their vision needs.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <span class="about-number">02</span>
+            <h3>Why Frame Selection Matters</h3>
+            <p>
+              A good frame is more than fashion. Frame shape, bridge width, and material (lightweight
+              titanium or durable acetate) affect facial comfort, lens alignment with your pupillary
+              distance (PD), and how thick lens edges appear.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <span class="about-number">03</span>
+            <h3>How Lens Indexes Work</h3>
+            <p>
+              A lens index measures how efficiently a lens material bends light. Higher-index materials
+              (like 1.60, 1.67, and 1.74) bend light more sharply, allowing the same prescription power
+              to be crafted into a much thinner and lighter lens.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <span class="about-number">04</span>
+            <h3>How OPTIVUE Helps Customers</h3>
+            <p>
+              Instead of guessing technical terms at an optical store, customers can browse frames by
+              shape and material, enter their SPH, CYL, Axis, and PD values, and arrive at their
+              optician well-informed and confident.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <p class="footer-brand">OPTIVUE</p>
+        <p class="footer-note">Eyewear Prescription Glasses Frame Selector &mdash; Educational Web Project</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#frames">Frames</a>
+        <a href="#lens-selector">Lens Selector</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CART DRAWER MODAL ================= -->
+  <div class="cart-overlay hidden" id="cartOverlay" aria-hidden="true">
+    <aside class="cart-drawer" role="dialog" aria-label="Shopping Cart">
+      <div class="cart-header">
+        <h3>Your Frame Cart</h3>
+        <button type="button" class="close-cart-btn" id="closeCartBtn" aria-label="Close cart">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <!-- Populated dynamically by script.js -->
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Estimated Total</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+        <div class="cart-footer-actions">
+          <button type="button" class="btn btn-outline" id="clearCartBtn">Clear Cart</button>
+          <button type="button" class="btn btn-primary" id="checkoutBtn">Confirm Selection</button>
+        </div>
+        <p class="cart-feedback hidden" id="cartFeedback"></p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
